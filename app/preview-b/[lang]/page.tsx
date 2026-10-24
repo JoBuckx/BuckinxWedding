@@ -40,7 +40,7 @@ export default async function PreviewBPage({params}:{params:Promise<{lang:string
      <img src={embeddedAssets.couplePhoto} alt="Isabelle and Joris" className="hero-b-photo"/>
     </div>
     <div className="hero-b-copy">
-     <p className="eyebrow">{t.invitation}</p>
+     
      <h1 className="names">Isabelle <span>&</span> Joris</h1>
      <p className="hero-tagline">{t.married}</p>
      <p className="hero-date">05 · 06 · 2027</p>
