@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import {Botanical} from '@/components/Botanical';
 import {LanguageChoice} from '@/components/LanguageChoice';
 import HomeRedirect from '@/components/HomeRedirect';
@@ -20,10 +19,6 @@ export default function Welcome(){
     <h2>Welcome · Welkom · Willkommen</h2>
     <p className="subdued">Please choose your language / Kies je taal / Bitte wählt eure Sprache</p>
     <LanguageChoice/>
-    <div className="welcome-links">
-     <p className="smallprint">A celebration of love, in the city where it all began.</p>
-     <Link href="/compare" className="compare-entry">Compare local preview themes</Link>
-    </div>
    </div>
   </div>
  </main>;
