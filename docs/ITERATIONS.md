@@ -57,3 +57,9 @@ Color variables and overrides are at the bottom of `app/globals.css`. The compar
 - [x] Split Van Oys booking deadline and room-request button onto separate lines.
 - [x] Made the CTA fit content instead of stretching across the text column.
 - [x] Used consistent spacing for mobile and desktop views.
+
+## Venue and Maastricht photography (24 October 2026)
+
+- [x] Replaced the Van Oys hotel-card watercolor with an exterior photograph of Château Van Oys (Michael Huber Photography, sourced via locaties.nl).
+- [x] Replaced the Discover Maastricht watercolor with an illuminated Sint Servaasbrug photograph (Henk Meijer Fotografie, via Werk aan de Muur thumbnail CDN).
+- [ ] Obtain publication/reuse permission for both third-party photographs before distributing the public wedding website broadly. Their current URLs are external and could stop working; after permission, host approved optimized copies locally.
