@@ -19,6 +19,7 @@ export default function Welcome(){
     <h2>Welcome · Welkom · Willkommen</h2>
     <p className="subdued">Please choose your language / Kies je taal / Bitte wählt eure Sprache</p>
     <LanguageChoice/>
+    <p className="smallprint" style={{marginTop:"18px"}}>A celebration of love, in the city where it all began.</p>
    </div>
   </div>
  </main>;
