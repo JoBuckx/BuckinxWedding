@@ -268,3 +268,8 @@ body{background:var(--ivory);color:var(--ink)}
 .room-deadline{display:block;line-height:1.5;max-width:100%;overflow-wrap:break-word;color:var(--sage-deep)}
 .room-booking-actions .button{margin:0;flex:none;align-self:flex-start;max-width:100%;white-space:normal;text-align:center;padding:12px 20px;min-height:46px}
 @media(max-width:620px){.room-booking-actions .button{width:auto;max-width:100%}}
+
+/* Story section: no repeated couple portrait; keep the introduction balanced. */
+.story-text-only .story-a-grid{display:block;max-width:790px;margin:0 auto}
+.story-text-only .story-copy{text-align:center}
+.story-text-only .gold-rule{margin:32px auto 16px}
