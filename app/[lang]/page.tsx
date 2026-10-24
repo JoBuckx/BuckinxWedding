@@ -1,6 +1,6 @@
 import {notFound} from 'next/navigation';
 import Link from 'next/link';
-import {CalendarDays,MapPin,Clock,Mail,ArrowUpRight,TrainFront,CarFront,Gift,Shirt,Heart,ArrowRight,Camera} from 'lucide-react';
+import {CalendarDays,MapPin,Clock,Mail,ArrowUpRight,TrainFront,CarFront,Gift,Shirt,Heart,ArrowRight} from 'lucide-react';
 import {Botanical} from '@/components/Botanical';
 import {LanguageChoice} from '@/components/LanguageChoice';
 import {embeddedAssets} from '@/content/embeddedAssets';
@@ -52,7 +52,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
     </div>
    </section>
 
-   <section id="story" className="section intro-section story-a">
+   <section id="story" className="section intro-section story-a story-text-only">
     <div className="story-a-grid">
      <div className="story-copy">
       <p className="eyebrow">{t.introEyebrow}</p>
@@ -61,10 +61,6 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
       <div className="gold-rule"/>
       <div className="monogram">I <span>&</span> J</div>
      </div>
-     <figure className="portrait-card">
-      <img src={embeddedAssets.couplePhoto} alt="Portrait of Isabelle and Joris"/>
-      <figcaption><Camera size={16}/> A little glimpse of us</figcaption>
-     </figure>
     </div>
    </section>
 
