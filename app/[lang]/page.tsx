@@ -80,7 +80,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
     <p className="section-lead">{t.stayIntro}</p>
     <div className="featured-hotel">
      <div className="featured-decoration scenic-decoration">
-      <img src={embeddedAssets.maastrichtWatercolor} alt="Decorative Maastricht watercolor"/>
+      <img src="https://www.locaties.nl/media/kx2m44jk/van-oys-maastricht-retreat-chateau-exterior-c-michael-huber-photography-oys25_1606_p.jpg" alt="Château Van Oys Maastricht Retreat exterior" loading="lazy"/>
      </div>
      <div className="featured-content">
       <p className="eyebrow">THE WEDDING VENUE</p>
@@ -112,7 +112,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
      <p className="section-lead">{t.exploreIntro}</p>
     </div>
     <div className="explore-art-row">
-     <img src={embeddedAssets.maastrichtWatercolor} alt="Maastricht city watercolor" className="explore-panorama"/>
+     <img src="https://cdn-thumbs.ohmyprints.net/1/b38e0b4f5d943c796d02bff2e4c6ceb6/817x600/thumbnail/fit.jpg" alt="Sint Servaasbrug illuminated at dusk with golden reflections on the Maas in Maastricht" className="explore-panorama" loading="lazy"/>
     </div>
     <div className="sights-grid">{wedding.sights.map((s,i)=><a className="sight" key={s.name} href={s.url} target="_blank" rel="noopener noreferrer"><span className="sight-number">0{i+1}</span><strong>{s.name}</strong><span>{t.exploreAction} <ArrowUpRight size={15}/></span></a>)}</div>
    </section>
