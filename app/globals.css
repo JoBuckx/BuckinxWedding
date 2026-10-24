@@ -273,3 +273,92 @@ body{background:var(--ivory);color:var(--ink)}
 .story-text-only .story-a-grid{display:block;max-width:790px;margin:0 auto}
 .story-text-only .story-copy{text-align:center}
 .story-text-only .gold-rule{margin:32px auto 16px}
+
+
+/* V1.5 — mobile-first refinements for guest browsing */
+html{overflow-x:clip}
+body{min-width:320px}
+.site-header,.hero-a,.section,.featured-content,.event,.hotel-card,.sight{min-width:0}
+.site-header .brand{flex-shrink:0}
+.desktop-nav a{display:inline-flex;align-items:center;min-height:40px}
+.header-langs{flex-shrink:0}
+.header-langs .lang-choice{min-height:44px;min-width:40px}
+.text-link,.card-arrow,.sight{touch-action:manipulation}
+.text-link{min-height:36px;align-items:center}
+.card-arrow{display:grid;place-items:center;min-width:44px;min-height:44px;right:6px;bottom:6px}
+.hero-photo,.hero-watercolor,.scenic-decoration img,.explore-panorama{object-position:center center}
+.room-booking-actions{width:100%}
+@media(max-width:860px){
+  .site-header{height:66px;gap:12px}
+  .desktop-nav{top:66px;display:flex;gap:18px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;white-space:nowrap;padding:5px 16px;background:var(--ivory)}
+  .desktop-nav a{font-size:11px;min-height:46px;letter-spacing:.04em}
+  .site-header{margin-bottom:46px}
+  html{scroll-padding-top:128px}
+  .hero-a,.hero-b{gap:22px}
+  .hero-a-visual{width:100%}
+  .featured-hotel{grid-template-columns:1fr}
+  .featured-decoration{min-height:0;aspect-ratio:16/10;padding:12px}
+  .featured-decoration img{width:100%;height:100%;object-fit:cover;border-radius:16px}
+  .room-booking-actions .button{min-height:48px}
+}
+@media(max-width:620px){
+  body{font-size:15px;line-height:1.65}
+  .section{padding:66px 18px}
+  .section h2{font-size:clamp(2.6rem,12vw,3.7rem);line-height:1.04}
+  .section h3{font-size:clamp(1.7rem,8vw,2rem)}
+  .section-lead{margin-bottom:26px}
+  .hero{padding:42px 18px 52px}
+  .hero .names{font-size:clamp(3.5rem,14vw,5rem);text-align:center;overflow-wrap:break-word}
+  .hero-a-copy .botanical{max-width:94%;margin:0 auto 4px}
+  .hero-a-copy .hero-tagline{font-size:1.8rem}
+  .hero-a-visual{min-height:370px}
+  .watercolor-frame{inset:0 8px 70px 8px}
+  .photo-float{width:clamp(150px,55%,220px)}
+  .hero-actions{width:100%}
+  .hero-actions .button{flex:1 1 165px;max-width:100%;min-height:48px;text-align:center}
+  .story-text-only .story-copy{text-align:center}
+  .story-text-only .gold-rule{margin:26px auto 14px}
+  .large-copy{font-size:clamp(1.36rem,5.5vw,1.7rem);line-height:1.48}
+  .event,.stacked-event{padding:20px 16px;grid-template-columns:1fr;gap:7px}
+  .event-time,.stacked-time{font-size:2.3rem}
+  .note-card{margin-top:22px;gap:12px}
+  .featured-hotel{margin:30px 0 40px;border-radius:22px}
+  .featured-decoration{aspect-ratio:4/3}
+  .featured-content{padding:22px 18px 26px}
+  .featured-content p{overflow-wrap:anywhere}
+  .room-booking-actions{gap:12px}
+  .room-booking-actions .button{min-height:48px;max-width:100%;padding:12px 19px}
+  .hotel-card{padding:22px 20px;min-height:185px}
+  .hotel-card h4{padding-right:23px}
+  .info-grid,.details-grid{margin-top:28px}
+  .info-card,.details-grid article{padding:24px 20px}
+  .sights-grid{gap:10px}
+  .sight{padding:16px;gap:8px;align-items:flex-start}
+  .sight strong{font-size:1.45rem;line-height:1.2}
+  .sight>span:last-child{margin-left:35px}
+  .explore-art-row{margin:12px auto 24px}
+  .explore-panorama{aspect-ratio:4/3;object-fit:cover}
+  .rsvp-section .button{min-height:50px;max-width:100%;white-space:normal}
+  .welcome-content{padding:26px 14px 32px}
+  .welcome-content h2{font-size:clamp(1.8rem,7.5vw,2.3rem)}
+  .welcome-visual-frame{min-height:unset}
+  .welcome-art{max-height:220px;overflow:hidden}
+  .welcome-watercolor{width:100%;height:220px;object-fit:cover}
+  .welcome-content .botanical{max-width:320px}
+  .language-choices{gap:7px}
+  .welcome-content .lang-choice{min-width:90px;min-height:82px}
+  .footer{padding:48px 18px 26px}
+  .preview-banner{display:none}
+}
+@media(max-width:370px){
+  .site-header{padding:0 10px}
+  .header-langs .language-choices{gap:0}
+  .header-langs .lang-choice{min-width:36px;padding:5px}
+  .hero .names{font-size:3.25rem}
+  .welcome-content .lang-choice{min-width:78px;padding:8px 5px}
+  .section{padding-left:14px;padding-right:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  a,button{transition:none}
+}
