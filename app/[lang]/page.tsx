@@ -3,8 +3,9 @@ import Link from 'next/link';
 import {CalendarDays,MapPin,Clock,Mail,ArrowUpRight,TrainFront,CarFront,Gift,Shirt,Heart,ArrowRight} from 'lucide-react';
 import {Botanical} from '@/components/Botanical';
 import {LanguageChoice} from '@/components/LanguageChoice';
+import {RsvpDialog} from '@/components/RsvpDialog';
 import {embeddedAssets} from '@/content/embeddedAssets';
-import {wedding,langs,rsvpForms,type Lang} from '@/content/data';
+import {wedding,langs,type Lang} from '@/content/data';
 import {translations} from '@/content/translations';
 
 export function generateStaticParams(){return langs.map(lang=>({lang}));}
@@ -14,7 +15,6 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
  if(!langs.includes(raw as Lang)) notFound();
  const lang=raw as Lang;
  const t=translations[lang];
- const form=rsvpForms[lang];
  const anchors=['story','day','stay','travel','explore','details','rsvp'];
  const mailto=(subject:string)=>`mailto:${wedding.email}?subject=${encodeURIComponent(subject)}`;
  const hotelBudget=(tier:string)=>{const i=['budget','budget-mid','mid','upper','small','restaurant','bb'].indexOf(tier);return t.budget[i];};
@@ -38,7 +38,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
      <p className="hero-date">05 · 06 · 2027</p>
      <p className="eyebrow">{t.city}</p>
      <div className="hero-actions">
-      <a className="button button-dark" href="#rsvp">{t.rsvpAction}<ArrowRight size={16}/></a>
+      <RsvpDialog lang={lang} label={t.rsvpAction}/>
       <Link className="button button-light" href={`/${lang}#story`}>{t.nav[0]}</Link>
      </div>
     </div>
@@ -128,7 +128,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
     <p className="eyebrow">{t.rsvpEyebrow}</p>
     <h2>{t.rsvpTitle}</h2>
     <p className="section-lead">{t.rsvpIntro}</p>
-    {form?<a className="button button-dark" href={form} target="_blank" rel="noopener noreferrer">{t.rsvpAction}<ArrowUpRight size={17}/></a>:<><p className="rsvp-pending">{t.rsvpMissing}</p><a className="button button-dark" href={mailto('Wedding RSVP / Huwelijk RSVP')}>{t.rsvpEmail}<ArrowUpRight size={17}/></a></>}
+    <RsvpDialog lang={lang} label={t.rsvpAction}/>
     <p className="fineprint privacy-copy">{t.privacy}</p>
    </section>
   </main>
