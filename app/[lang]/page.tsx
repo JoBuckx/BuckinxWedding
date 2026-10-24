@@ -112,7 +112,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
      <p className="section-lead">{t.exploreIntro}</p>
     </div>
     <div className="explore-art-row">
-     <img src="https://cdn-thumbs.ohmyprints.net/1/b38e0b4f5d943c796d02bff2e4c6ceb6/817x600/thumbnail/fit.jpg" alt="Sint Servaasbrug illuminated at dusk with golden reflections on the Maas in Maastricht" className="explore-panorama" loading="lazy"/>
+     <img src="https://www.countryandtownhouse.com/wp-content/uploads/2024/03/GettyImages-867301882-1536x1024.jpg" alt="Photograph of Maastricht, Netherlands" className="explore-panorama" loading="lazy"/>
     </div>
     <div className="sights-grid">{wedding.sights.map((s,i)=><a className="sight" key={s.name} href={s.url} target="_blank" rel="noopener noreferrer"><span className="sight-number">0{i+1}</span><strong>{s.name}</strong><span>{t.exploreAction} <ArrowUpRight size={15}/></span></a>)}</div>
    </section>
