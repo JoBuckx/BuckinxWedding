@@ -63,3 +63,14 @@ Color variables and overrides are at the bottom of `app/globals.css`. The compar
 - [x] Replaced the Van Oys hotel-card watercolor with an exterior photograph of Château Van Oys (Michael Huber Photography, sourced via locaties.nl).
 - [x] Replaced the Discover Maastricht watercolor with an illuminated Sint Servaasbrug photograph (Henk Meijer Fotografie, via Werk aan de Muur thumbnail CDN).
 - [ ] Obtain publication/reuse permission for both third-party photographs before distributing the public wedding website broadly. Their current URLs are external and could stop working; after permission, host approved optimized copies locally.
+
+## V1.5 — Mobile-first layout refinement
+
+- [x] Preserve Design A and Olive & Champagne palette.
+- [x] Larger touch targets for navigation, language choice, directions and primary buttons.
+- [x] More compact, swipeable navigation on narrow screens.
+- [x] Mobile-sized wedding hero and welcome artwork without excessive scrolling.
+- [x] Single-column wedding-day schedule, hotel cards, travel sections and attractions.
+- [x] Improve Van Oys room request spacing and responsive image cropping.
+- [x] Improve RSVP CTA, text wrapping, 320px layout and reduced-motion behavior.
+- [ ] Verify visually on actual iPhone/Android screens, especially external photo loading and language switching.
