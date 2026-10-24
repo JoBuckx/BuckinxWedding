@@ -31,7 +31,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
   <main className="theme-a-main">
    <section className="hero hero-a">
     <div className="hero-a-copy">
-     <p className="eyebrow">{t.invitation}</p>
+     
      <Botanical />
      <h1 className="names">Isabelle <span>&</span> Joris</h1>
      <p className="hero-tagline">{t.married}</p>
