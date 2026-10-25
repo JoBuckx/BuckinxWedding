@@ -402,3 +402,10 @@ body{min-width:320px}
 .rsvp-couple-photo{width:min(100%,370px);margin:34px auto 23px;padding:7px;background:var(--paper);border-radius:23px;box-shadow:0 10px 34px rgba(44,55,29,.10)}
 .rsvp-couple-photo img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 47%;border-radius:17px}
 @media(max-width:620px){.rsvp-couple-photo{width:min(84%,310px);margin:27px auto 20px;padding:6px;border-radius:18px}.rsvp-couple-photo img{border-radius:13px}}
+
+/* A personal Maastricht stop, situated between the city photograph and other suggestions. */
+.first-date-feature{max-width:980px;margin:0 auto 24px;padding:24px 28px;border:1px solid rgba(74,97,78,.13);border-radius:24px;background:var(--paper);display:flex;justify-content:space-between;align-items:center;gap:24px;box-shadow:var(--shadow)}
+.first-date-feature h3{margin:4px 0 9px;font-size:clamp(1.65rem,3vw,2.1rem)}
+.first-date-feature p:not(.eyebrow){margin:0;color:var(--muted);max-width:570px}
+.first-date-feature .button{flex-shrink:0;min-height:48px;white-space:nowrap}
+@media(max-width:720px){.first-date-feature{margin-bottom:18px;padding:22px 20px;display:flex;flex-direction:column;align-items:flex-start;gap:15px;border-radius:20px}.first-date-feature .button{align-self:flex-start;white-space:normal}}
