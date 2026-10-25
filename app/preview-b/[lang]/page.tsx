@@ -1,8 +1,8 @@
 import {notFound} from 'next/navigation';
 import Link from 'next/link';
 import {CalendarDays,Clock,Mail,ArrowUpRight,TrainFront,CarFront,Gift,Shirt,Heart,ArrowRight,ExternalLink} from 'lucide-react';
-import {Botanical} from '@/components/Botanical';
 import {LanguageChoice} from '@/components/LanguageChoice';
+import {SightsDialog} from '@/components/SightsDialog';
 import {embeddedAssets} from '@/content/embeddedAssets';
 import {wedding,langs,rsvpForms,type Lang} from '@/content/data';
 import {translations} from '@/content/translations';
@@ -45,7 +45,7 @@ export default async function PreviewBPage({params}:{params:Promise<{lang:string
      <p className="hero-tagline">{t.married}</p>
      <p className="hero-date">05 · 06 · 2027</p>
      <p className="hero-b-location">{t.city}</p>
-     <Botanical small/>
+     
      <div className="hero-actions">
       <a className="button button-dark" href="#rsvp">{t.rsvpAction}<ArrowRight size={16}/></a>
       <a className="button button-ghost" href="#day">{t.dayTitle}</a>
@@ -107,8 +107,8 @@ export default async function PreviewBPage({params}:{params:Promise<{lang:string
     <div className="section-head-stack left-align"><p className="eyebrow">{t.exploreEyebrow}</p><h2>{t.exploreTitle}</h2><p className="section-lead wide-left">{t.exploreIntro}</p></div>
     <div className="postcard-grid">
      <img src={embeddedAssets.maastrichtWatercolor} alt="Maastricht view" className="postcard-art"/>
-     <div className="postcard-links">{wedding.sights.map((s,i)=><a className="postcard-link" key={s.name} href={s.url} target="_blank" rel="noopener noreferrer"><span>{String(i+1).padStart(2,'0')}</span><strong>{s.name}</strong><ArrowUpRight size={16}/></a>)}</div>
-    </div>
+     <SightsDialog lang={lang} variant="postcard"/>
+        </div>
    </section>
 
    <section id="details" className="section">
