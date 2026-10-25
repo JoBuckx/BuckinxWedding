@@ -397,3 +397,8 @@ body{min-width:320px}
 
 /* Restore intentional breathing room after the welcome names, now that the botanical ornament is removed. */
 .welcome-content .date-wordmark{margin-top:clamp(22px,4vw,40px)}
+
+/* A small, personal photo below RSVP; compact on phones. */
+.rsvp-couple-photo{width:min(100%,370px);margin:34px auto 23px;padding:7px;background:var(--paper);border-radius:23px;box-shadow:0 10px 34px rgba(44,55,29,.10)}
+.rsvp-couple-photo img{width:100%;aspect-ratio:3/2;object-fit:cover;object-position:50% 47%;border-radius:17px}
+@media(max-width:620px){.rsvp-couple-photo{width:min(84%,310px);margin:27px auto 20px;padding:6px;border-radius:18px}.rsvp-couple-photo img{border-radius:13px}}
