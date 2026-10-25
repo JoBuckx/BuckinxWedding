@@ -487,3 +487,28 @@ body{min-width:320px}
  #day .timeline .wedding-event-card{grid-template-columns:1fr;gap:12px}
  #day .wedding-event-card .event-side{flex-direction:row;align-items:center}
 }
+
+/* Wedding-day agenda: identical width for all three cards, illustrations at left and copy at right. */
+#day .timeline,
+#day > .note-card{box-sizing:border-box;width:min(100%,900px);max-width:900px;margin-left:auto;margin-right:auto}
+#day .timeline{display:grid;grid-template-columns:minmax(0,1fr);gap:22px}
+#day .timeline > .wedding-event-card{box-sizing:border-box;width:100%;max-width:none;display:grid;grid-template-columns:128px minmax(0,1fr);gap:26px;padding:28px 30px;align-items:start}
+#day .timeline > .wedding-event-card .event-side{width:100%;display:flex;flex-direction:column;align-items:flex-start;gap:12px}
+#day .timeline > .wedding-event-card .event-body{width:100%;min-width:0;align-self:start}
+#day .timeline > .wedding-event-card .event-body .icon-line{display:block;margin:0 0 4px}
+#day .timeline > .wedding-event-card .event-body h3{margin:0 0 12px}
+#day .timeline > .wedding-event-card .event-body p{margin-bottom:12px}
+#day .timeline > .wedding-event-card .event-side .event-illustration{width:112px;max-width:112px;height:112px;aspect-ratio:1/1;margin:0}
+#day > .note-card{margin-top:22px;display:flex;align-items:flex-start;gap:18px;padding:28px 30px}
+@media(max-width:620px){
+ #day .timeline{gap:16px}
+ #day .timeline > .wedding-event-card{grid-template-columns:92px minmax(0,1fr);gap:14px;padding:20px 16px}
+ #day .timeline > .wedding-event-card .event-side .event-time{font-size:2rem}
+ #day .timeline > .wedding-event-card .event-side .event-illustration{width:84px;max-width:84px;height:84px}
+ #day .timeline > .wedding-event-card .event-body h3{font-size:clamp(1.5rem,6vw,1.9rem);line-height:1.12}
+ #day > .note-card{margin-top:16px;padding:20px 16px;gap:12px}
+}
+@media(max-width:360px){
+ #day .timeline > .wedding-event-card{grid-template-columns:1fr;gap:14px}
+ #day .timeline > .wedding-event-card .event-side{flex-direction:row;align-items:center;gap:18px}
+}
