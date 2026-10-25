@@ -1,4 +1,3 @@
-import {Botanical} from '@/components/Botanical';
 import {LanguageChoice} from '@/components/LanguageChoice';
 import HomeRedirect from '@/components/HomeRedirect';
 import {embeddedAssets} from '@/content/embeddedAssets';
@@ -13,7 +12,7 @@ export default function Welcome(){
    <div className="welcome-content">
     <p className="eyebrow">THE WEDDING OF</p>
     <h1 className="names">Isabelle <span>&</span> Joris</h1>
-    <Botanical/>
+    
     <p className="date-wordmark">05 · 06 · 2027 <span>—</span> MAASTRICHT</p>
     <div className="welcome-divider"/>
     <h2>Welcome · Welkom · Willkommen</h2>
