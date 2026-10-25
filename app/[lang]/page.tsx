@@ -130,7 +130,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
 
    <section id="explore" className="section scenic-section">
     <div className="section-head-stack">
-     <p className="eyebrow">{t.exploreEyebrow}</p>
+     {lang !== "de" && <p className="eyebrow">{t.exploreEyebrow}</p>}
      <h2>{t.exploreTitle}</h2>
      <p className="section-lead">{t.exploreIntro}</p>
     </div>
