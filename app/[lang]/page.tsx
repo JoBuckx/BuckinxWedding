@@ -6,6 +6,7 @@ import {SightsDialog} from '@/components/SightsDialog';
 import {RsvpDialog} from '@/components/RsvpDialog';
 import {embeddedAssets} from '@/content/embeddedAssets';
 import {rsvpCouplePhoto} from '@/content/rsvpPhoto';
+import {churchAquarelle} from '@/content/churchAquarelle';
 import {wedding,langs,type Lang} from '@/content/data';
 import {translations} from '@/content/translations';
 
@@ -69,8 +70,30 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
     <p className="eyebrow">{t.dayEyebrow}</p>
     <h2>{t.dayTitle}</h2>
     <div className="timeline">
-     <article className="event"><div className="event-time">{wedding.ceremony.time}</div><div><span className="icon-line"><CalendarDays size={20}/></span><h3>{t.church}</h3><p>{t.churchText}</p><address>{wedding.ceremony.address}</address><a className="text-link" href={wedding.ceremony.maps} target="_blank" rel="noopener noreferrer">{t.directions}<ArrowUpRight size={16}/></a></div></article>
-     <article className="event"><div className="event-time">{wedding.reception.time}</div><div><span className="icon-line"><Heart size={20}/></span><h3>{t.reception}</h3><p>{t.receptionText}</p><strong>{wedding.reception.name}</strong><address>{wedding.reception.address}</address><a className="text-link" href={wedding.reception.maps} target="_blank" rel="noopener noreferrer">{t.directions}<ArrowUpRight size={16}/></a></div></article>
+     <article className="event wedding-event-card">
+      <div className="event-time">{wedding.ceremony.time}</div>
+      <div className="event-body">
+       <span className="icon-line"><CalendarDays size={20}/></span>
+       <h3>{t.church}</h3>
+       <figure className="event-illustration"><img src={churchAquarelle} alt="Watercolor illustration of the wedding ceremony church" loading="lazy"/></figure>
+       <p>{t.churchText}</p>
+       
+       <address>{wedding.ceremony.address}</address>
+       <a className="text-link" href={wedding.ceremony.maps} target="_blank" rel="noopener noreferrer">{t.directions}<ArrowUpRight size={16}/></a>
+      </div>
+     </article>
+     <article className="event wedding-event-card">
+      <div className="event-time">{wedding.reception.time}</div>
+      <div className="event-body">
+       <span className="icon-line"><Heart size={20}/></span>
+       <h3>{t.reception}</h3>
+       <figure className="event-illustration"><img src="https://www.locaties.nl/media/kx2m44jk/van-oys-maastricht-retreat-chateau-exterior-c-michael-huber-photography-oys25_1606_p.jpg" alt="Château Van Oys Maastricht Retreat" loading="lazy"/></figure>
+       <p>{t.receptionText}</p>
+       <strong>{wedding.reception.name}</strong>
+       <address>{wedding.reception.address}</address>
+       <a className="text-link" href={wedding.reception.maps} target="_blank" rel="noopener noreferrer">{t.directions}<ArrowUpRight size={16}/></a>
+      </div>
+     </article>
     </div>
     <div className="note-card"><Clock size={22}/><div><h3>{t.between}</h3><p>{t.betweenText}</p><a className="text-link" href="https://www.google.com/maps/place/Buitengoed+Slavante/@50.8258116,5.6923542,17z/data=!3m2!4b1!5s0x47c0e90c96cfcb5d:0xf4dc76f389a6b186!4m6!3m5!1s0x47c0e90c90fe6643:0x7bb6a548dcca85be!8m2!3d50.8258082!4d5.6949291!16s%2Fg%2F121f49qk" target="_blank" rel="noopener noreferrer">Buitengoed Slavante · {t.directions}<ArrowUpRight size={16}/></a><a className="text-link between-suggestions" href="#explore">{lang === "de" ? "Ausflugstipps" : lang === "nl" ? "Ontdek onze tips" : "Explore suggestions"}<ArrowRight size={16}/></a></div></div>
    </section>
