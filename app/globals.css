@@ -418,3 +418,22 @@ body{min-width:320px}
 .first-date-map-link svg{flex-shrink:0;color:var(--gold)}
 @media(max-width:720px){.first-date-feature{margin-bottom:34px;gap:20px}.first-date-map-link{width:100%;min-height:66px;padding:17px 18px}}
 @media(prefers-reduced-motion:reduce){.first-date-map-link{transition:none}}
+
+/* Wedding day: vertically stacked, image-led cards for every screen size. */
+.timeline{grid-template-columns:minmax(0,1fr);max-width:920px;margin:48px auto 0;gap:28px}
+.timeline .wedding-event-card{display:grid;grid-template-columns:100px minmax(0,1fr);gap:24px;padding:32px;border-radius:28px;align-items:start}
+.wedding-event-card .event-body{min-width:0}
+.wedding-event-card .event-body h3{margin-bottom:15px}
+.event-illustration{width:100%;margin:18px 0 24px;border-radius:20px;overflow:hidden;background:var(--cream)}
+.event-illustration img{display:block;width:100%;height:clamp(230px,35vw,320px);object-fit:cover;object-position:center}
+.wedding-event-card:first-child .event-illustration{max-width:540px;margin-left:auto;margin-right:auto;background:var(--ivory)}
+.wedding-event-card:first-child .event-illustration img{object-fit:contain;height:320px}
+.wedding-event-card .text-link{margin-top:8px}
+@media(max-width:620px){
+ .timeline{margin-top:30px;gap:20px}
+ .timeline .wedding-event-card{grid-template-columns:1fr;gap:5px;padding:23px 18px;border-radius:22px}
+ .wedding-event-card .event-body h3{margin-bottom:10px}
+ .event-illustration{margin:16px 0 19px;border-radius:16px}
+ .event-illustration img{height:205px}
+ .wedding-event-card:first-child .event-illustration img{height:240px}
+}
