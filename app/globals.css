@@ -437,3 +437,9 @@ body{min-width:320px}
  .event-illustration img{height:205px}
  .wedding-event-card:first-child .event-illustration img{height:240px}
 }
+
+/* Compact matching image frames for both wedding-day cards. */
+.timeline .wedding-event-card .event-illustration{width:min(100%,360px);max-width:360px;aspect-ratio:3/2;margin:16px 0 22px;overflow:hidden;border-radius:16px;background:var(--ivory)}
+.timeline .wedding-event-card .event-illustration img,.timeline .wedding-event-card:first-child .event-illustration img{display:block;width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;object-position:center}
+.timeline .wedding-event-card:first-child .event-illustration{margin-left:0;margin-right:0}
+@media(max-width:620px){.timeline .wedding-event-card .event-illustration{width:min(100%,260px);max-width:260px;margin:13px 0 18px;border-radius:14px}}
