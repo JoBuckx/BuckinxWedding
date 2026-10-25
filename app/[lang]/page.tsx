@@ -1,8 +1,8 @@
 import {notFound} from 'next/navigation';
 import Link from 'next/link';
 import {CalendarDays,MapPin,Clock,Mail,ArrowUpRight,TrainFront,CarFront,Gift,Shirt,Heart,ArrowRight} from 'lucide-react';
-import {Botanical} from '@/components/Botanical';
 import {LanguageChoice} from '@/components/LanguageChoice';
+import {SightsDialog} from '@/components/SightsDialog';
 import {RsvpDialog} from '@/components/RsvpDialog';
 import {embeddedAssets} from '@/content/embeddedAssets';
 import {wedding,langs,type Lang} from '@/content/data';
@@ -32,7 +32,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
    <section className="hero hero-a">
     <div className="hero-a-copy">
      
-     <Botanical />
+     
      <h1 className="names">Isabelle <span>&</span> Joris</h1>
      <p className="hero-tagline">{t.married}</p>
      <p className="hero-date">05 · 06 · 2027</p>
@@ -114,7 +114,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
     <div className="explore-art-row">
      <img src="https://www.countryandtownhouse.com/wp-content/uploads/2024/03/GettyImages-867301882-1536x1024.jpg" alt="Photograph of Maastricht, Netherlands" className="explore-panorama" loading="lazy"/>
     </div>
-    <div className="sights-grid">{wedding.sights.map((s,i)=><a className="sight" key={s.name} href={s.url} target="_blank" rel="noopener noreferrer"><span className="sight-number">0{i+1}</span><strong>{s.name}</strong><span>{t.exploreAction} <ArrowUpRight size={15}/></span></a>)}</div>
+    <SightsDialog lang={lang}/>
    </section>
 
    <section id="details" className="section section-tinted">
@@ -124,7 +124,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
    </section>
 
    <section id="rsvp" className="section rsvp-section">
-    <Botanical small/>
+    
     <p className="eyebrow">{t.rsvpEyebrow}</p>
     <h2>{t.rsvpTitle}</h2>
     <p className="section-lead">{t.rsvpIntro}</p>
