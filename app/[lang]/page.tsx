@@ -71,11 +71,10 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
     <h2>{t.dayTitle}</h2>
     <div className="timeline">
      <article className="event wedding-event-card">
-      <div className="event-time">{wedding.ceremony.time}</div>
+      <div className="event-side"><div className="event-time">{wedding.ceremony.time}</div><figure className="event-illustration"><img src={churchAquarelle} alt="Watercolor illustration of the wedding ceremony church" loading="lazy"/></figure></div>
       <div className="event-body">
        <span className="icon-line"><CalendarDays size={20}/></span>
        <h3>{t.church}</h3>
-       <figure className="event-illustration"><img src={churchAquarelle} alt="Watercolor illustration of the wedding ceremony church" loading="lazy"/></figure>
        <p>{t.churchText}</p>
        
        <address>{wedding.ceremony.address}</address>
@@ -83,11 +82,10 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
       </div>
      </article>
      <article className="event wedding-event-card">
-      <div className="event-time">{wedding.reception.time}</div>
+      <div className="event-side"><div className="event-time">{wedding.reception.time}</div><figure className="event-illustration"><img src="https://www.locaties.nl/media/kx2m44jk/van-oys-maastricht-retreat-chateau-exterior-c-michael-huber-photography-oys25_1606_p.jpg" alt="Château Van Oys Maastricht Retreat" loading="lazy"/></figure></div>
       <div className="event-body">
        <span className="icon-line"><Heart size={20}/></span>
        <h3>{t.reception}</h3>
-       <figure className="event-illustration"><img src="https://www.locaties.nl/media/kx2m44jk/van-oys-maastricht-retreat-chateau-exterior-c-michael-huber-photography-oys25_1606_p.jpg" alt="Château Van Oys Maastricht Retreat" loading="lazy"/></figure>
        <p>{t.receptionText}</p>
        <strong>{wedding.reception.name}</strong>
        <address>{wedding.reception.address}</address>
