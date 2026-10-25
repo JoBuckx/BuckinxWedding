@@ -443,3 +443,23 @@ body{min-width:320px}
 .timeline .wedding-event-card .event-illustration img,.timeline .wedding-event-card:first-child .event-illustration img{display:block;width:100%;height:100%;aspect-ratio:3/2;object-fit:cover;object-position:center}
 .timeline .wedding-event-card:first-child .event-illustration{margin-left:0;margin-right:0}
 @media(max-width:620px){.timeline .wedding-event-card .event-illustration{width:min(100%,260px);max-width:260px;margin:13px 0 18px;border-radius:14px}}
+
+/* Agenda layout: one full-width column per event, compact matching photo beneath the time. */
+.timeline{display:grid;grid-template-columns:minmax(0,1fr);max-width:780px;margin:40px auto 0;gap:22px}
+.timeline .wedding-event-card{display:flex;flex-direction:column;align-items:stretch;gap:18px;padding:30px;border-radius:26px}
+.wedding-event-card .event-side{display:flex;flex-direction:column;align-items:flex-start;gap:13px}
+.wedding-event-card .event-side .event-time{margin:0;line-height:1}
+.timeline .wedding-event-card .event-side .event-illustration,
+.timeline .wedding-event-card:first-child .event-side .event-illustration{display:block;width:116px;max-width:116px;height:116px;aspect-ratio:1/1;margin:0;padding:5px;border:1px solid rgba(74,97,78,.14);border-radius:16px;background:var(--paper);box-shadow:0 6px 18px rgba(36,63,45,.08);overflow:hidden}
+.timeline .wedding-event-card .event-side .event-illustration img,
+.timeline .wedding-event-card:first-child .event-side .event-illustration img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;border-radius:11px}
+.wedding-event-card .event-body{width:100%;min-width:0}
+.wedding-event-card .event-body h3{margin-bottom:14px}
+@media(max-width:620px){
+ .timeline{margin-top:26px;gap:17px}
+ .timeline .wedding-event-card{display:flex;flex-direction:column;gap:15px;padding:22px 18px;border-radius:22px}
+ .timeline .wedding-event-card .event-side .event-illustration,
+ .timeline .wedding-event-card:first-child .event-side .event-illustration{width:96px;max-width:96px;height:96px;padding:4px;border-radius:14px}
+ .timeline .wedding-event-card .event-side .event-illustration img,
+ .timeline .wedding-event-card:first-child .event-side .event-illustration img{border-radius:10px}
+}
