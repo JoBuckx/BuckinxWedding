@@ -115,6 +115,14 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
     <div className="explore-art-row">
      <img src="https://www.countryandtownhouse.com/wp-content/uploads/2024/03/GettyImages-867301882-1536x1024.jpg" alt="Photograph of Maastricht, Netherlands" className="explore-panorama" loading="lazy"/>
     </div>
+    <div className="first-date-feature">
+     <div>
+      <p className="eyebrow">{lang==='nl'?'ONZE EERSTE DATE':lang==='de'?'UNSER ERSTES DATE':'OUR FIRST DATE'}</p>
+      <h3>{lang==='nl'?'Beleef onze eerste date opnieuw':lang==='de'?'Erlebt unser erstes Date noch einmal':'Re-experience our first date'}</h3>
+      <p>{lang==='nl'?'Breng een bezoek aan Bistro & Café Servaas, waar onze eerste date plaatsvond. Of ontdek een van de andere leuke plekken hieronder.':lang==='de'?'Besucht Bistro & Café Servaas, wo unser erstes Date stattfand. Oder entdeckt einen der anderen schönen Orte weiter unten.':'Visit Bistro & Café Servaas, where we had our first date. Or discover one of the other lovely places below.'}</p>
+     </div>
+     <a className="button button-light" href="https://www.google.com/maps/place/Bistro+%26+Caf%C3%A9+Servaas/@50.8490693,5.6975247,21z/data=!4m6!3m5!1s0x47c0e9beee71890f:0x18ea8b7742587cbe!8m2!3d50.8490448!4d5.6976884!16s%2Fg%2F1td4nvlv" target="_blank" rel="noopener noreferrer">{lang==='nl'?'Bekijk op kaart':lang==='de'?'Auf Karte ansehen':'View on map'}<ArrowUpRight size={16}/></a>
+    </div>
     <SightsDialog lang={lang}/>
    </section>
 
