@@ -7,6 +7,7 @@ import {RsvpDialog} from '@/components/RsvpDialog';
 import {embeddedAssets} from '@/content/embeddedAssets';
 import {rsvpCouplePhoto} from '@/content/rsvpPhoto';
 import {churchAquarelle} from '@/content/churchAquarelle';
+import {vanOysWatercolor} from '@/content/vanOysWatercolor';
 import {wedding,langs,type Lang} from '@/content/data';
 import {translations} from '@/content/translations';
 
@@ -82,7 +83,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
       </div>
      </article>
      <article className="event wedding-event-card">
-      <div className="event-side"><div className="event-time">{wedding.reception.time}</div><figure className="event-illustration"><img src="https://www.locaties.nl/media/kx2m44jk/van-oys-maastricht-retreat-chateau-exterior-c-michael-huber-photography-oys25_1606_p.jpg" alt="Château Van Oys Maastricht Retreat" loading="lazy"/></figure></div>
+      <div className="event-side"><div className="event-time">{wedding.reception.time}</div><figure className="event-illustration"><img src={vanOysWatercolor} alt="Watercolor illustration of Château Van Oys Maastricht Retreat" loading="lazy"/></figure></div>
       <div className="event-body">
        <span className="icon-line"><Heart size={20}/></span>
        <h3>{t.reception}</h3>
