@@ -383,3 +383,14 @@ body{min-width:320px}
  .rsvp-modal-list li{gap:9px}
  .rsvp-modal-action{display:flex;width:100%;padding:13px 15px}
 }
+
+/* Minimal artwork treatment and tap-friendly discover-details pop-ups */
+.sight-dialog-trigger{appearance:none;border:0;width:100%;font-family:inherit;font-size:inherit;cursor:pointer;text-align:left;color:inherit}
+.sight-dialog-trigger:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.sight-dialog-trigger:hover{transform:translateY(-2px)}
+.sight-modal .sight-modal-description{font-size:1rem;line-height:1.75;color:var(--ink);margin:20px 0 26px}
+.sight-modal .rsvp-modal-action{width:auto}
+@media(max-width:620px){
+ .sight-dialog-trigger{min-height:76px}
+ .sight-modal .rsvp-modal-action{width:100%}
+}
