@@ -5,6 +5,7 @@ import {LanguageChoice} from '@/components/LanguageChoice';
 import {SightsDialog} from '@/components/SightsDialog';
 import {RsvpDialog} from '@/components/RsvpDialog';
 import {embeddedAssets} from '@/content/embeddedAssets';
+import {rsvpCouplePhoto} from '@/content/rsvpPhoto';
 import {wedding,langs,type Lang} from '@/content/data';
 import {translations} from '@/content/translations';
 
@@ -129,6 +130,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
     <h2>{t.rsvpTitle}</h2>
     <p className="section-lead">{t.rsvpIntro}</p>
     <RsvpDialog lang={lang} label={t.rsvpAction}/>
+    <figure className="rsvp-couple-photo"><img src={rsvpCouplePhoto} alt="Isabelle and Joris together by the water" loading="lazy"/></figure>
     <p className="fineprint privacy-copy">{t.privacy}</p>
    </section>
   </main>
