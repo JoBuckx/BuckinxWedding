@@ -72,7 +72,7 @@ export default async function WeddingPage({params}:{params:Promise<{lang:string}
      <article className="event"><div className="event-time">{wedding.ceremony.time}</div><div><span className="icon-line"><CalendarDays size={20}/></span><h3>{t.church}</h3><p>{t.churchText}</p><address>{wedding.ceremony.address}</address><a className="text-link" href={wedding.ceremony.maps} target="_blank" rel="noopener noreferrer">{t.directions}<ArrowUpRight size={16}/></a></div></article>
      <article className="event"><div className="event-time">{wedding.reception.time}</div><div><span className="icon-line"><Heart size={20}/></span><h3>{t.reception}</h3><p>{t.receptionText}</p><strong>{wedding.reception.name}</strong><address>{wedding.reception.address}</address><a className="text-link" href={wedding.reception.maps} target="_blank" rel="noopener noreferrer">{t.directions}<ArrowUpRight size={16}/></a></div></article>
     </div>
-    <div className="note-card"><Clock size={22}/><div><h3>{t.between}</h3><p>{t.betweenText}</p></div></div>
+    <div className="note-card"><Clock size={22}/><div><h3>{t.between}</h3><p>{t.betweenText}</p><a className="text-link between-suggestions" href="#explore">{lang === "de" ? "Ausflugstipps" : lang === "nl" ? "Ontdek onze tips" : "Explore suggestions"}<ArrowRight size={16}/></a></div></div>
    </section>
 
    <section id="stay" className="section">
