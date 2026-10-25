@@ -74,3 +74,11 @@ Color variables and overrides are at the bottom of `app/globals.css`. The compar
 - [x] Improve Van Oys room request spacing and responsive image cropping.
 - [x] Improve RSVP CTA, text wrapping, 320px layout and reduced-motion behavior.
 - [ ] Verify visually on actual iPhone/Android screens, especially external photo loading and language switching.
+
+## Minimal visual direction and Maastricht details pop-ups
+
+- [x] Removed eucalyptus branch ornaments from the welcome, main and alternate-preview pages while retaining the Olive & Champagne palette.
+- [x] Replaced direct 'Discover Maastricht' map clicks with bilingual/trilingual mobile-friendly information dialogs, consistent with RSVP.
+- [x] Added descriptions grounded in Wedding Guest Guide (English pages 18–19, corresponding NL/DE sections) for Maas/Sint Servaasbrug, Stokstraat/Jeker, Vrijthof, Boekhandel Dominicanen, Helpoort/Stadspark, and Van Wijck café.
+- [x] Each dialog presents a secondary map button to the existing location URL.
+- [ ] Verify dialogs and layout on deployed mobile devices.
